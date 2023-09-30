@@ -12,13 +12,13 @@
 <body>
     <div class="container">
         <div class="position-absolute translate-middle bg-warning bg-gradient rounded">
-            @foreach($results as $key -> $results)
+            @foreach($results as $item => $value)
             @if ($loop->last)
-            <img src="{{ asset('storage/image/'.$results) }}" style="width: 200px; height: 300px;">
+            <img src="{{ asset('storage/image/'.$value) }}" style="width: 200px; height: 300px;">
             @endif
             <div class="p-2">
                 <a>
-                    {{$key}} = {{$results}}
+                    {{$item}} = {{$value}}
                 </a>
             </div>
             @endforeach

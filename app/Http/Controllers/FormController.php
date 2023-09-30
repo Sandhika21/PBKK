@@ -19,7 +19,7 @@ class FormController extends Controller {
         ]);
         $request->pict->storeAs('public/images', $request->pict->getClientOriginalName());
 
-        $response = [
+        $results = [
             'Name'=>$request->Nama,
             'IPS'=>$request->IPS,
             'Telephone'=>$request->Telephone,
@@ -27,11 +27,11 @@ class FormController extends Controller {
             'Image'=>$request->pict->getClientOriginalName(),
         ];
 
-        return redirect('/preview')->with(['response'=>$response, 'submission'=>'Submit Berhasil']);
+        return redirect('/preview')->with(['results'=>$results, 'submission'=>'Submit Berhasil']);
     }
 
     public function preview(){
-        $response = session()->get('response');
-        return view('preview', ['response' => $response]);
+        $results = session()->get('results');
+        return view('preview', ['results' => $results]);
     }
 }

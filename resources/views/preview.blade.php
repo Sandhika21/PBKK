@@ -22,9 +22,9 @@
                 </a>
             </div>
             @endforeach
-            @if (session('submission'))
+            @if (session('status'))
             <div class="alert alert-success">
-                {{ session('submission') }}
+                {{ session('status') }}
             </div>
             @endif
         </div>

@@ -27,7 +27,7 @@ class FormController extends Controller {
             'Image'=>$request->pict->getClientOriginalName(),
         ];
 
-        return redirect('/preview')->with(['results'=>$results, 'submission'=>'Submit Berhasil']);
+        return redirect('/preview')->with(['results'=>$results, 'status'=>'Submit Berhasil']);
     }
 
     public function preview(){

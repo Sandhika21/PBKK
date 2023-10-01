@@ -16,39 +16,39 @@
                 <div class="form-group">
                     <label for="Name">Name</label>
                     <input type="text" class="form-control" id="Name" placeholder="Your Name" name="Name">
-                    @error
+                    @error('Name')
                     <div class="alert alert-danger text">{{ $message }}</div>
                     @enderror
                 </div>
                 <div class="form-group">
                     <label for="IPS">IPS</label>
                     <input type="text" class="form-control" id="IPS" placeholder="3.45" name="IPS">
-                    @error
+                    @error('IPS')
                     <div class="alert alert-danger text">{{ $message }}</div>
                     @enderror
                 </div>
                 <div class="form-group">
                     <label for="Telephone">Telephone</label>
                     <input type="text" class="form-control" id="Telephone" placeholder="081234567890" name="Telephone">
-                    @error
+                    @error('Telephone')
                     <div class="alert alert-danger text">{{ $message }}</div>
                     @enderror
                 </div>
                 <div class="form-group">
                     <label for="Email">Email</label>
                     <input type="email" class="form-control" id="Email" placeholder="abcd1234@mail.com" name="Email">
-                    @error
+                    @error('Email')
                     <div class="alert alert-danger text">{{ $message }}</div>
                     @enderror
                 </div>
                 <div class="form-group">
                     <label for="Image">Image</label>
                     <input type="file" class="form-control-file" id="Image" name="Image" accept="image/">
-                    @error
+                    @error('Image')
                     <div class="alert alert-danger text">{{ $message }}</div>
                     @enderror
                 </div>
-                <div type="submit" class="btn btn-primary">Submit</div>
+                <button type="submit" class="btn btn-primary">Submit</button>
             </form>            
         </div>
     </div>
